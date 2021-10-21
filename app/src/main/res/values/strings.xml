@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ProjectUp Mobile</string>
+    <string name="btnLogin_string">Login</string>
 </resources>
