@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import co.edu.sena.projectupmobile.databinding.ActivityMainBinding
 import com.huawei.hms.common.ApiException
 import com.huawei.hms.support.account.AccountAuthManager
@@ -11,7 +12,7 @@ import com.huawei.hms.support.account.request.AccountAuthParams
 import com.huawei.hms.support.account.request.AccountAuthParamsHelper
 import com.huawei.hms.support.account.service.AccountAuthService
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     // Variables
     companion object {
@@ -27,20 +28,22 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnLogin.setOnClickListener {
-            // Se envía una autorización de request
-            val authParams : AccountAuthParams =
-                AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
-                    .setAuthorizationCode()
-                    .createParams()
+        binding.btnLogin.setOnClickListener(this)
+    }
 
-            // Se inicializa le objeto account para la autenticación
-            val service : AccountAuthService =
-                AccountAuthManager.getService(this, authParams)
+    override fun onClick(v: View?) {
+        // Se envía una autorización de request
+        val authParams : AccountAuthParams =
+            AccountAuthParamsHelper(AccountAuthParams.DEFAULT_AUTH_REQUEST_PARAM)
+                .setIdToken()
+                .createParams()
 
-            // Desplegar la autorización
-            startActivityForResult(service.signInIntent, REQUEST_CODE)
-        }
+        // Se inicializa le objeto account para la autenticación
+        val service : AccountAuthService =
+            AccountAuthManager.getService(this, authParams)
+
+        // Desplegar la autorización
+        startActivityForResult(service.signInIntent, REQUEST_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -50,11 +53,19 @@ class MainActivity : AppCompatActivity() {
             if (authAccountTask.isSuccessful) {
                 // El inicio de sesión es correcto, y el código de autorización ha sido obtenido.
                 val authAccount = authAccountTask.result
-                Log.i(TAG, "Codigo de autorizacion:" + authAccount.authorizationCode)
+                binding.textView.apply {
+                    append(" ${authAccount.displayName}")
+                    if (authAccount.email.isNotEmpty()) {
+                        append(" ${authAccount.email}")
+                    }
+                }
+                Log.i(TAG, "Codigo de autorizacion:" + authAccount.authorizationCode + authAccount.idToken)
             } else {
                 // Error al iniciar sesión
+                binding.textView.append("Fallo al iniciar sesion:" + (authAccountTask.exception as ApiException).statusCode)
                 Log.e(TAG, "Fallo al iniciar sesion:" + (authAccountTask.exception as ApiException).statusCode)
             }
         }
     }
+
 }
