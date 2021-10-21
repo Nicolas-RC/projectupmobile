@@ -3,12 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/projectupmobile/app/src/main/res/drawable/ic_icono.xml" value="0.3828125" />
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/projectupmobile/app/src/main/res/drawable/icono_eslogan_projectup.xml" value="0.3828125" />
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/projectupmobile/app/src/main/res/drawable/icono_projectup.xml" value="0.3828125" />
         <entry key="..\:/Users/SENA/AndroidStudioProjects/projectupmobile/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/SENA/AndroidStudioProjects/projectupmobile/app/src/main/res/layout/activity_main.xml" value="0.18854166666666666" />
-=======
-        <entry key="..\:/Users/SENA/AndroidStudioProjects/projectupmobile/app/src/main/res/layout/activity_main.xml" value="0.33" />
->>>>>>> 7d1175611009ad033dd191b6844fe8eb1c11c0fc
+        <entry key="..\:/Users/SENA/AndroidStudioProjects/projectupmobile/app/src/main/res/layout/card_layout.xml" value="0.33" />
         <entry key="..\:/Users/niroc/AndroidStudioProjects/ProjectUpMobile/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
       </map>
     </option>
