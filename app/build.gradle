@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.huawei.agconnect'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -24,6 +25,11 @@ android {
             keyPassword 'key123'
             storePassword 'key123'
         }
+    }
+
+    buildFeatures {
+        viewBinding true
+        dataBinding true
     }
 
     buildTypes {
