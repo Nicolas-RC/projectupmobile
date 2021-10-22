@@ -14,16 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectUpMobile">
         <activity
-            android:name=".NavegationActivity"
+            android:name=".MainActivity"
             android:exported="false"
-            android:label="@string/title_activity_navegation"
-            android:theme="@style/Theme.ProjectUpMobile.NoActionBar" />
+             />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".NavegationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ProjectUpMobile.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -10,7 +10,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Eventos</string>
+    <string name="menu_gallery">Drive</string>
+    <string name="menu_slideshow">Wiki</string>
+    <string name="tituloP_evento">Eventos</string>
 </resources>
