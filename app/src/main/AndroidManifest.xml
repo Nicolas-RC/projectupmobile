@@ -16,6 +16,7 @@
         android:theme="@style/Theme.ProjectUpMobile">
         <!-- Inicio SplashActivity -->
         <activity
+<<<<<<< HEAD
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.ProjectUpMobile.NoActionBar">
@@ -33,14 +34,35 @@
         </activity>
         <!-- Fin MainActivity -->
         <!-- Inicio HomeActivity -->
+=======
+            android:name=".crearEvento_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+>>>>>>> 63a73c302a7c4ad6f9d9902aefb93725673f84cf
         <activity
             android:name=".HomeActivity"
             android:exported="false" /> <!-- Fin HomeActivity -->
         <!-- Inicio NavegationActivity -->
         <activity
             android:name=".NavegationActivity"
+<<<<<<< HEAD
             android:exported="false"
             android:theme="@style/Theme.ProjectUpMobile.NoActionBar" />
+=======
+            android:exported="true"
+            android:theme="@style/Theme.ProjectUpMobile.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+>>>>>>> 63a73c302a7c4ad6f9d9902aefb93725673f84cf
     </application>
 
 </manifest>

@@ -22,7 +22,9 @@
             android:layout_height="100dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="16dp" />
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="center"
+            />
 
         <TextView
             android:id="@+id/TituloEvento"
