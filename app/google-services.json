@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "304289181320",
+    "project_id": "projectup-mobile",
+    "storage_bucket": "projectup-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304289181320:android:330d5ea7f4e223ffedb93d",
+        "android_client_info": {
+          "package_name": "co.edu.sena.projectupmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304289181320-1hdvpe12i095mkr5kafelbbncahukr6f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIw15i1gHrQK4O5aI3QnomTBnKVsr51-Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "304289181320-1hdvpe12i095mkr5kafelbbncahukr6f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
