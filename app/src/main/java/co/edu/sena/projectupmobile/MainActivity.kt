@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         // Se inicializa le objeto account para la autenticación
         val service = HuaweiIdAuthManager.getService(this, authParams)
-        startActivityForResult(service.getSignInIntent(), REQUEST_CODE)
+        startActivityForResult(service.signInIntent, REQUEST_CODE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
