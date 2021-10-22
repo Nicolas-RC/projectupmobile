@@ -13,18 +13,24 @@ class CustomerAdapterCard: RecyclerView.Adapter<CustomerAdapterCard.ViewHolder>(
         "Informe Levantamiento Información",
         "Diagramas I",
         "Sesion de Revision",
+        "Diagramas II",
+        "Sesion de Revision II",
     )
 
     val finicio = arrayOf(
         "2021/05/19",
         "2021/04/20",
         "2021/10/27",
+        "2021/011/20",
+        "2021/07/27",
     )
 
     val fcierre = arrayOf(
         "2021/05/25",
         "2021/04/23",
-        "2021/11/03",
+        "2021/10/27",
+        "2021/011/28",
+        "2021/07/27",
     )
 
 

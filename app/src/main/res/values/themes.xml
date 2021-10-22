@@ -15,4 +15,13 @@
         <item name="icon">@drawable/ic_launcher_background</item> <!-- ic_logo -->
         <item name="iconTint">@color/accent</item>
     </style>
+
+    <style name="Theme.ProjectUpMobile.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ProjectUpMobile.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.ProjectUpMobile.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
