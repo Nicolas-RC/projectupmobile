@@ -6,17 +6,16 @@
     <!-- check network permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-<<<<<<< HEAD
+
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"
         tools:ignore="ProtectedPermissions" />
-=======
+
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Camera permission -->
     <uses-permission android:name="android.permission.CAMERA" /> <!-- File read permission -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
->>>>>>> 99131d720d3a25b8360ca91930171c2a6a440c89
 
     <application
         android:allowBackup="true"

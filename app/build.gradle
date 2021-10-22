@@ -69,8 +69,6 @@ dependencies {
     // Drive Kit
     implementation 'com.huawei.hms:drive:5.0.0.305'
     implementation 'com.huawei.hms:push:5.3.0.301'
-    //Scan kit
-    implementation 'com.huawei.hms: scan: 1.3.2.300'
 
 
     //Para trabajar los eventos
