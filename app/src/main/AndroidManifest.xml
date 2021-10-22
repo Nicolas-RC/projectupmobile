@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectUpMobile">
         <activity
+<<<<<<< HEAD
             android:name=".ui.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -24,15 +25,30 @@
         </activity>
         <activity
             android:name=".NavegationActivity"
-            android:exported="false"
-            android:label="@string/title_activity_navegation"
-            android:theme="@style/Theme.ProjectUpMobile.NoActionBar" />
-        <activity
+=======
             android:name=".MainActivity"
-            android:exported="false" />
+>>>>>>> 69fc8f98d1b49933520a60c58023ee4f0cbb4a11
+            android:exported="false"
+             />
         <activity
             android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+<<<<<<< HEAD
+            android:name=".HomeActivity"
             android:exported="false"/>
+=======
+            android:name=".NavegationActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ProjectUpMobile.NoActionBar"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+>>>>>>> 69fc8f98d1b49933520a60c58023ee4f0cbb4a11
     </application>
 
 </manifest>

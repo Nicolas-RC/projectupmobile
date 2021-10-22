@@ -3,10 +3,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/home">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/home"
         android:name="co.edu.sena.projectupmobile.ui.evento.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
@@ -22,4 +22,9 @@
         android:name="co.edu.sena.projectupmobile.ui.wiki.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="co.edu.sena.projectupmobile.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
 </navigation>

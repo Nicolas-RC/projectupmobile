@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import co.edu.sena.projectupmobile.CustomerAdapterCard
 import co.edu.sena.projectupmobile.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -30,9 +32,15 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+        val recyclerView = binding.recycleView
+        val adapter = CustomerAdapterCard()
+
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.adapter= adapter
+
+        val textView: TextView = binding.textView
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
+            textView.text = ""
         })
         return root
     }
