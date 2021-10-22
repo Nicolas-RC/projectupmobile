@@ -1,6 +1,8 @@
 package co.edu.sena.projectupmobile
 
+import android.Manifest
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -21,7 +23,6 @@ import com.huawei.hms.support.hwid.result.AuthHuaweiId
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     // Variables
-
     private val REQUEST_CODE = 8888
     private val TAG = "MainActivityInfo"
     val scopes = listOf(
@@ -34,6 +35,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         Scope(DriveScopes.SCOPE_DRIVE_APPDATA)
     )
 
+    private val PERMISSION_STORAGE = arrayOf<String>(
+        Manifest.permission.READ_EXTERNAL_STORAGE,
+        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+        Manifest.permission.CAMERA
+    )
+
     // Binding
     lateinit var binding: ActivityMainBinding
 
@@ -41,6 +48,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            requestPermissions(PERMISSION_STORAGE, 1)
+        }
 
         binding.btnLogin.setOnClickListener(this)
     }
@@ -64,6 +75,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             if (authHuaweiIdTask.isSuccessful) {
                 // El inicio de sesión es correcto, y el código de autorización ha sido obtenido.
                 val authAccount = authHuaweiIdTask.result
+                val idToken = authAccount.idToken
+                val unionId = authAccount.unionId
+                val name = authAccount.displayName
+                val email = authAccount.email
                 binding.textView.apply {
                     append(" ${authAccount.displayName}")
                     if (authAccount.email.isNotEmpty()) {
