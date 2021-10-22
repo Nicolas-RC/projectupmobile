@@ -14,7 +14,7 @@
     <string name="menu_gallery">Drive</string>
     <string name="menu_slideshow">Wiki</string>
     <string name="tituloP_evento">Eventos</string>
-<<<<<<< HEAD
+
     <string name="title_activity_splash">Splash</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -24,10 +24,10 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-=======
+
     <string name="hint_event_name">Nombre Evento</string>
     <string name="date_start_event">Fecha Inicio</string>
     <string name="date_end_event">Fecha Cierre</string>
     <string name="create_botton_event">Crear</string>
->>>>>>> 63a73c302a7c4ad6f9d9902aefb93725673f84cf
+
 </resources>

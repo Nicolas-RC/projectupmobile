@@ -4,7 +4,7 @@
     <!-- Permisos -->
     <!-- check network permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- check wifi state -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
@@ -14,9 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectUpMobile">
+
         <!-- Inicio SplashActivity -->
         <activity
-<<<<<<< HEAD
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.ProjectUpMobile.NoActionBar">
@@ -27,42 +27,33 @@
             </intent-filter>
         </activity>
         <!-- Fin SplashActivity -->
+
         <!-- Inicio MainActivity -->
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false"/>
         <!-- Fin MainActivity -->
-        <!-- Inicio HomeActivity -->
-=======
+
+        <!-- Inicio crearEvento_Activity -->
+        <activity
             android:name=".crearEvento_Activity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SplashActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
->>>>>>> 63a73c302a7c4ad6f9d9902aefb93725673f84cf
+            android:exported="false"
+            android:parentActivityName=".HomeActivity"/>
+        <!-- Fin crearEvento_Activity -->
+
+        <!-- Inicio HomeActivity -->
         <activity
             android:name=".HomeActivity"
-            android:exported="false" /> <!-- Fin HomeActivity -->
+            android:exported="false" />
+        <!-- Inicio HomeActivity -->
+
+
         <!-- Inicio NavegationActivity -->
         <activity
             android:name=".NavegationActivity"
-<<<<<<< HEAD
-            android:exported="false"
-            android:theme="@style/Theme.ProjectUpMobile.NoActionBar" />
-=======
             android:exported="true"
-            android:theme="@style/Theme.ProjectUpMobile.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
->>>>>>> 63a73c302a7c4ad6f9d9902aefb93725673f84cf
+            android:theme="@style/Theme.ProjectUpMobile.NoActionBar"/>
+        <!-- Fin NavegationActivity -->
     </application>
 
 </manifest>
