@@ -6,11 +6,17 @@
     <!-- check network permissions -->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"
         tools:ignore="ProtectedPermissions" />
+=======
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Camera permission -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- File read permission -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+>>>>>>> 99131d720d3a25b8360ca91930171c2a6a440c89
 
     <application
         android:allowBackup="true"
@@ -19,7 +25,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectUpMobile">
-
+        <activity
+            android:name=".Scan_Activity"
+            android:exported="false" />
         <!-- Inicio SplashActivity -->
         <activity
             android:name=".SplashActivity"
@@ -30,35 +38,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- Fin SplashActivity -->
-
+        </activity> <!-- Fin SplashActivity -->
         <!-- Inicio MainActivity -->
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
-        <!-- Fin MainActivity -->
-
+            android:exported="false" /> <!-- Fin MainActivity -->
         <!-- Inicio crearEvento_Activity -->
         <activity
             android:name=".crearEvento_Activity"
             android:exported="false"
-            android:parentActivityName=".HomeActivity"/>
-        <!-- Fin crearEvento_Activity -->
-
+            android:parentActivityName=".HomeActivity" /> <!-- Fin crearEvento_Activity -->
         <!-- Inicio HomeActivity -->
         <activity
             android:name=".HomeActivity"
-            android:exported="false" />
-        <!-- Inicio HomeActivity -->
-
-
+            android:exported="false" /> <!-- Inicio HomeActivity -->
         <!-- Inicio NavegationActivity -->
         <activity
             android:name=".NavegationActivity"
             android:exported="true"
-            android:theme="@style/Theme.ProjectUpMobile.NoActionBar"/>
-        <!-- Fin NavegationActivity -->
+            android:theme="@style/Theme.ProjectUpMobile.NoActionBar" />
     </application>
 
 </manifest>

@@ -29,5 +29,6 @@
     <string name="date_start_event">Fecha Inicio</string>
     <string name="date_end_event">Fecha Cierre</string>
     <string name="create_botton_event">Crear</string>
+    <string name="botton_permisos_scan"> Escanear Código</string>
 
 </resources>
