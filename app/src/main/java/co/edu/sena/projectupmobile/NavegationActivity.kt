@@ -12,8 +12,10 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import co.edu.sena.projectupmobile.databinding.ActivityNavegationBinding
 import co.edu.sena.projectupmobile.databinding.FragmentHomeBinding
+import co.edu.sena.projectupmobile.databinding.NavHeaderNavegationBinding
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.huawei.hms.support.hwid.result.AuthHuaweiId
 
 class NavegationActivity : AppCompatActivity() {
 
@@ -27,6 +29,9 @@ class NavegationActivity : AppCompatActivity() {
         binding = ActivityNavegationBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val huaweiAccount = intent.extras?.getParcelable<AuthHuaweiId>("account")
+
+
 
         setSupportActionBar(binding.appBarNavegation.toolbar)
 
@@ -36,6 +41,7 @@ class NavegationActivity : AppCompatActivity() {
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
+        // val headerNav: NavHeaderNavegationBinding
         val navController = findNavController(R.id.nav_host_fragment_content_navegation)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.

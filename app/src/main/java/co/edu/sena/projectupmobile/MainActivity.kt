@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import co.edu.sena.projectupmobile.databinding.ActivityMainBinding
+import com.huawei.cloud.services.drive.DriveScopes
 import com.huawei.hms.common.ApiException
 import com.huawei.hms.support.account.AccountAuthManager
 import com.huawei.hms.support.account.request.AccountAuthParams
@@ -15,6 +16,7 @@ import com.huawei.hms.support.api.entity.auth.Scope
 import com.huawei.hms.support.hwid.HuaweiIdAuthManager
 import com.huawei.hms.support.hwid.request.HuaweiIdAuthParams
 import com.huawei.hms.support.hwid.request.HuaweiIdAuthParamsHelper
+import com.huawei.hms.support.hwid.result.AuthHuaweiId
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -22,7 +24,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private val REQUEST_CODE = 8888
     private val TAG = "MainActivityInfo"
-    val scopes = listOf(Scope("email"))
+    val scopes = listOf(
+        Scope("email"),
+        Scope(DriveScopes.SCOPE_DRIVE),
+        Scope(DriveScopes.SCOPE_DRIVE_FILE),
+        Scope(DriveScopes.SCOPE_DRIVE_METADATA),
+        Scope(DriveScopes.SCOPE_DRIVE_METADATA_READONLY),
+        Scope(DriveScopes.SCOPE_DRIVE_READONLY),
+        Scope(DriveScopes.SCOPE_DRIVE_APPDATA)
+    )
 
     // Binding
     lateinit var binding: ActivityMainBinding
@@ -59,14 +69,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     if (authAccount.email.isNotEmpty()) {
                         append(" ${authAccount.email}")
                     }
+                    sendHome(authAccount)
                 }
-                Log.i(TAG, "Codigo de autorizacion:" + authAccount.authorizationCode + authAccount.idToken)
+                Log.i(TAG, "Codigo de autorizacion:" + authAccount.authorizationCode + authAccount.idToken + "Name:" + authAccount.displayName + "Email" + authAccount.email )
             } else {
                 // Error al iniciar sesión
                 binding.textView.append("Fallo al iniciar sesion:" + (authHuaweiIdTask.exception as ApiException).statusCode)
                 Log.e(TAG, "Fallo al iniciar sesion:" + (authHuaweiIdTask.exception as ApiException).statusCode)
             }
         }
+    }
+
+    fun sendHome(authAccount: AuthHuaweiId){
+        val intent = Intent(this, NavegationActivity::class.java)
+        intent.putExtra("account", authAccount)
+        startActivity(intent)
     }
 
 }
