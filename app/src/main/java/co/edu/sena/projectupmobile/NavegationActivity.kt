@@ -1,5 +1,6 @@
 package co.edu.sena.projectupmobile
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
@@ -31,8 +32,8 @@ class NavegationActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarNavegation.toolbar)
 
         binding.appBarNavegation.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            val intent = Intent(this, crearEvento_Activity::class.java)
+            startActivity(intent)
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView

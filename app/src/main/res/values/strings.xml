@@ -14,4 +14,8 @@
     <string name="menu_gallery">Drive</string>
     <string name="menu_slideshow">Wiki</string>
     <string name="tituloP_evento">Eventos</string>
+    <string name="hint_event_name">Nombre Evento</string>
+    <string name="date_start_event">Fecha Inicio</string>
+    <string name="date_end_event">Fecha Cierre</string>
+    <string name="create_botton_event">Crear</string>
 </resources>
